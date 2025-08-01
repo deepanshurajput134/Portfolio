@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Deepanshu Rajput का पोर्टफोलियो। Frontend Developer - HTML, CSS, JavaScript में दक्ष।">
+  <title>Deepanshu Rajput | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-40">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl sm:text-2xl font-bold text-blue-600">My portfolio</h1>
+      <i onclick="show_popup()" class="fa-solid fa-grip-lines cursor-pointer sm:hidden"></i>
+      <nav class="hidden sm:block">
+        <ul class="flex gap-6 text-sm sm:text-base font-medium text-gray-600 ">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- popup box -->
+  <div id="popup_box" class= "fixed top-9 right-12 z-50 bg-white px-10 py-3 rounded-lg shadow-lg hidden">
+      <ul class="flex flex-col gap-6 text-sm sm:text-base font-medium text-gray-600">
+        <li><a onclick="hide_popup()" href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a onclick="hide_popup()" href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a onclick="hide_popup()" href="#skills" class="hover:text-blue-500">Skills</a></li>
+        <li><a onclick="hide_popup()" href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a onclick="hide_popup()" href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 bg-gray-100 text-center px-4">
+    <img src="profile.jpeg" alt="Profile photo" class="w-32 h-32 rounded-full mx-auto shadow-md border-4 border-white mb-4">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-2">Hi, I'm <span class="text-blue-600">Deepanshu Rajput</span></h2>
+    <p class="text-gray-600 text-base sm:text-lg">Frontend Developer | HTML | CSS | JavaScript</p>
+    <a href="#projects">
+      <button class="mt-6 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition animate-pulse">
+        View Projects
+      </button>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-blue-600 mb-4">About Me</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        I’m a self-taught frontend developer with a strong passion for clean UI, responsive design, and user experience. I love transforming ideas into real-world digital solutions using modern web technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-50 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-blue-600 mb-10">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div>
+          <i class="fab fa-html5 text-5xl text-orange-500 mb-2"></i>
+          <p class="font-medium mt-2">HTML</p>
+        </div>
+        <div>
+          <i class="fab fa-css3-alt text-5xl text-blue-500 mb-2"></i>
+          <p class="font-medium mt-2">CSS</p>
+        </div>
+        <div>
+          <i class="fab fa-js text-5xl text-yellow-400 mb-2"></i>
+          <p class="font-medium mt-2">JavaScript</p>
+        </div>
+        <div>
+          <i class="fab fa-git-alt text-5xl text-red-500 mb-2"></i>
+          <p class="font-medium mt-2">Git</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 bg-white px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-semibold text-blue-600 mb-10">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      
+      <!-- Simple Calculator -->
+      <div class="shadow-md rounded-lg p-6 border hover:shadow-lg transition ">
+        <img src="calculator.png" alt="calculator" class="h-36 mx-auto">
+        <h3 class="text-lg font-semibold mb-2">Simple Calculator</h3>
+        <p class="text-gray-600 mb-2">A basic calculator built using HTML, CSS, and JavaScript with full operations support.</p>
+        <a href="http://127.0.0.1:5500/src/Portfolio/calculator.html" target="_blank"  rel="noopener noreferrer" class="text-blue-500 hover:underline">🔗 View Project</a>
+      </div>
+
+      <!-- To-Do App -->
+      <div class="shadow-md rounded-lg p-6 border hover:shadow-lg transition ">
+        <img src="todo_list.jpeg" alt="To-Do List App" class="h-32 mx-auto rounded-xl">
+        <h3 class="text-lg font-semibold mb-2">To-Do App</h3>
+        <p class="text-gray-600 mb-2">A simple to-do app made with JavaScript and localStorage to manage daily tasks.</p>
+        <a href="http://127.0.0.1:5500/src/Portfolio/to_do_list.html" target="_blank"  rel="noopener noreferrer" class="text-blue-500 hover:underline">🔗 View Project</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Footer -->
+  <footer id="contact" class="bg-blue-600 text-white text-center py-8 mt-10">
+    <h3 class="text-lg font-semibold mb-2">Contact Me</h3>
+    <p>Email: deepanshu_rajput134@gmail.com</p>
+    <p class="text-sm mt-2">© 2025 Deepanshu Rajput</p>
+  </footer>
+
+</body>
+<script>
+  function show_popup(){
+    var box = document.getElementById("popup_box");
+    box.style.display = "block"
+  }
+
+
+  function hide_popup(){
+    var box = document.getElementById("popup_box");
+    box.style.display = "none"
+  }
+</script>
+
+</html>

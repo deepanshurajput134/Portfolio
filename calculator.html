@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylish Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-400 to-blue-500 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-6 rounded-2xl shadow-2xl w-80">
+    <h1 class="text-center text-2xl font-bold text-gray-800 mb-4">Calculator</h1>
+    
+    <input 
+      type="text" 
+      id="display" 
+      placeholder="0"
+      readonly 
+      class="w-full text-right text-2xl font-mono border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none bg-gray-50"
+    />
+
+    <div class="grid grid-cols-4 gap-3">
+      <button onclick="clearDisplay()" class="btn bg-red-400 text-white hover:bg-red-600 rounded-md">C</button>
+      <button onclick="appendValue('/')" class="btn border hover:bg-gray-200">/</button>
+      <button onclick="appendValue('x')" class="btn border hover:bg-gray-200">x</button>
+      <button onclick="deleteLast()" class="btn bg-yellow-400 text-white hover:bg-yellow-600 rounded-md">DEL</button>
+
+      <button onclick="appendValue('7')" class="btn border hover:bg-gray-200">7</button>
+      <button onclick="appendValue('8')" class="btn border hover:bg-gray-200">8</button>
+      <button onclick="appendValue('9')" class="btn border hover:bg-gray-200">9</button>
+      <button onclick="appendValue('-')" class="btn border hover:bg-gray-200">-</button>
+
+      <button onclick="appendValue('4')" class="btn border hover:bg-gray-200">4</button>
+      <button onclick="appendValue('5')" class="btn border hover:bg-gray-200">5</button>
+      <button onclick="appendValue('6')" class="btn border hover:bg-gray-200">6</button>
+      <button onclick="appendValue('+')" class="btn border hover:bg-gray-200">+</button>
+
+      <button onclick="appendValue('1')" class="btn border hover:bg-gray-200">1</button>
+      <button onclick="appendValue('2')" class="btn border hover:bg-gray-200">2</button>
+      <button onclick="appendValue('3')" class="btn border hover:bg-gray-200">3</button>
+      <button onclick="calculateResult()" class="btn bg-blue-500 hover:bg-blue-700 text-white row-span-2 rounded-lg">=</button>
+
+      <button onclick="appendValue('0')" class="btn border hover:bg-gray-200 ">0</button>
+      <button onclick="appendValue('00')" class="btn border hover:bg-gray-200 ">00</button>
+      <button onclick="appendValue('.')" class="btn border hover:bg-gray-200">.</button>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById('display');
+
+    function appendValue(value) {
+      display.value += value;
+    }
+
+    function clearDisplay() {
+      display.value = '';
+    }
+
+    function deleteLast() {
+      display.value = display.value.slice(0, -1);
+    }
+
+    function calculateResult() {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = 'Error';
+      }
+    }
+  </script>
+
+
+</body>
+</html>
